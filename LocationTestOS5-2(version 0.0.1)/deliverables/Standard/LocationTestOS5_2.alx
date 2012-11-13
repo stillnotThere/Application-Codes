@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="LocationTestOS5_2">
+		<name >
+			Locaiton Tracker OS5 (2nd)
+		</name>
+		<description >
+			
+		</description>
+		<version >
+			1.0.0
+		</version>
+		<vendor >
+			Tester
+		</vendor>
+		<copyright >
+			Copyright (c) 2012 Tester
+		</copyright>
+		<fileset Java="1.55" _blackberryVersion="[5.0.0)">
+			<directory >
+				5.0.0
+			</directory>
+			<files >
+				LocationTestOS5_2.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

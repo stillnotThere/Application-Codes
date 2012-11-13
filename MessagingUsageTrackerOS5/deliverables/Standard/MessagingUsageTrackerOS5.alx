@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="MessagingUsageTrackerOS5">
+		<name >
+			Messaging Tracker OS5
+		</name>
+		<description >
+			Kepps track of your messaging use(not BBM messages)
+		</description>
+		<version >
+			0.0.1
+		</version>
+		<vendor >
+			BlackBerry Developer
+		</vendor>
+		<copyright >
+			Copyright (c) 2012 BlackBerry Developer
+		</copyright>
+		<fileset Java="1.55" _blackberryVersion="[5.0.0)">
+			<directory >
+				5.0.0
+			</directory>
+			<files >
+				MessagingUsageTrackerOS5.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

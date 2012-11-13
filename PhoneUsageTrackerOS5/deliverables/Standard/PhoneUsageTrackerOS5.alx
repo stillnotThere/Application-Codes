@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="PhoneUsageTrackerOS5">
+		<name >
+			Phone Usage Tracker
+		</name>
+		<description >
+			Tracks call usage (in seconds)
+		</description>
+		<version >
+			0.0.1
+		</version>
+		<vendor >
+			BlackBerry Developer
+		</vendor>
+		<copyright >
+			Copyright (c) 2012 BlackBerry Developer
+		</copyright>
+		<fileset Java="1.55" _blackberryVersion="[5.0.0)">
+			<directory >
+				5.0.0
+			</directory>
+			<files >
+				PhoneUsageTrackerOS5.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

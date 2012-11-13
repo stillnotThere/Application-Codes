@@ -1,0 +1,18 @@
+MIDlet-Name: LocationTestOS5-2
+MIDlet-Version: 0.0.2
+MIDlet-Vendor: CPH inc TesterModule
+MIDlet-Jar-URL: LocationTestOS5-2.jar
+MIDlet-Jar-Size: 16621
+MicroEdition-Profile: MIDP-2.0
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-1: Locaiton Tracker OS5 2nd (Ver. 0.0.2),res/img/icon.png,
+RIM-MIDlet-Flags-1: 1
+MIDlet-2: LocationTest2_BGEntry,,auto-startup
+RIM-MIDlet-Flags-2: 2
+Manifest-Version: 1.0
+RIM-COD-URL: LocationTestOS5_2.cod
+RIM-COD-Size: 7408
+RIM-COD-Creation-Time: 1352830900
+RIM-COD-Module-Name: LocationTestOS5_2
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_locationapi,net_rim_bbapi_phone
+RIM-COD-SHA1: 8c 01 58 58 a6 01 86 1b 3c 5f 6f 6e cd e6 f4 19 46 21 6f b9

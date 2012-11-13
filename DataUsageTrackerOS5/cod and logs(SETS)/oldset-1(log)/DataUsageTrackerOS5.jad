@@ -1,0 +1,16 @@
+MIDlet-Name: DataUsageTrackerOS5
+MIDlet-Version: 0.0.1
+MIDlet-Vendor: BlackBerry Developer
+MIDlet-Jar-URL: DataUsageTrackerOS5.jar
+MIDlet-Jar-Size: 8916
+MicroEdition-Profile: MIDP-2.0
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-1: ,res/img/icon.png,
+RIM-MIDlet-Flags-1: 0
+Manifest-Version: 1.0
+RIM-COD-URL: DataUsageTrackerOS5.cod
+RIM-COD-Size: 4372
+RIM-COD-Creation-Time: 1350602229
+RIM-COD-Module-Name: DataUsageTrackerOS5
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_ui_api
+RIM-COD-SHA1: 9f 65 05 47 10 52 f7 58 33 30 64 ce 08 97 a6 ec 5e 58 db 9a

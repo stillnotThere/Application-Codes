@@ -1,0 +1,31 @@
+<loader version="1.0">
+	<application id="LocationTestOS5">
+		<name >
+			Location Tracking
+		</name>
+		<description >
+			Tracks location every 5 seconds and sends to server 
+		</description>
+		<version >
+			0.1.4
+		</version>
+		<vendor >
+			CPH Inc
+		</vendor>
+		<copyright >
+			Copyright (c) 2012 CPH Inc
+		</copyright>
+		<fileset Java="1.55" _blackberryVersion="[5.0.0)">
+			<directory >
+				5.0.0
+			</directory>
+			<files >
+				LocationTestOS5.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

@@ -1,0 +1,19 @@
+MIDlet-Name: LocationTestOS5
+MIDlet-Version: 0.1.4
+MIDlet-Vendor: CPH Inc
+MIDlet-Jar-URL: LocationTestOS5.jar
+MIDlet-Jar-Size: 19380
+MIDlet-Description: Tracks location every 5 seconds and sends to server
+MicroEdition-Profile: MIDP-2.0
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-1: Location Tracking,res/img/icon.png,
+RIM-MIDlet-Flags-1: 0
+MIDlet-2: LocationTest_autoentry,,auto-startup
+RIM-MIDlet-Flags-2: 2
+Manifest-Version: 1.0
+RIM-COD-URL: LocationTestOS5.cod
+RIM-COD-Size: 26400
+RIM-COD-Creation-Time: 1351793014
+RIM-COD-Module-Name: LocationTestOS5
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_locationapi
+RIM-COD-SHA1: b1 aa 5b 2d 06 e1 91 8f 8f 5d 0b ff ac 00 b0 1b 60 f1 a5 b3

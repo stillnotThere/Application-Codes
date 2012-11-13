@@ -1,0 +1,12 @@
+MIDlet-Name: LocationTestOS5-2
+MIDlet-Version: 0.0.2
+MIDlet-Vendor: CPH inc TesterModule
+MIDlet-Jar-URL: LocationTestOS5-2.jar
+MIDlet-Jar-Size: 0
+MicroEdition-Profile: MIDP-2.0
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-1: Locaiton Tracker OS5 2nd (Ver. 0.0.2),res/img/icon.png,
+RIM-MIDlet-Flags-1: 1
+MIDlet-2: LocationTest2_BGEntry,,auto-startup
+RIM-MIDlet-Flags-2: 2
+
