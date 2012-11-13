@@ -24,88 +24,55 @@ public class ServerCommunication {
 	public final String url = "socket://cphcloud.biz:53";
 	public final String ip = "socket://99.229.28.101:53";
 	public String PhoneNumber = "";
+	public String UnformatedPhoneNumber = "";
+	public String Name = "";
 	public boolean ERROR = false;
 	
-	public ServerCommunication(String str)
+	/** 7x2 matrix **/
+	public String[][] Name_Phone = {{"Gianni" , "6479819606"} , 
+										{"Mary" , "6479835125"} ,
+										{"Kumar" , "4167173533"} ,
+										{"Vinni" , "6472977855"} ,
+										{"Dimple" , "4162594680"} ,
+										{"Rohan" , "6474648458"} ,
+ 										{"Ashwin" , "4166700180"} };
+
+	public ServerCommunication()
 	{
-		this.str = str;
-		startConnection();
-		if(!ERROR)
-		{
-			openDataOutputStream();
-			writingDataOutputStream();
-		}
-		else
-		{
-			//do nothing 
-				//TODO check if required anything
-		}
+		
 	}
 	
-	public void startConnection()
-	{
-		this.str = str;
+	public void StartandSend(String str) {
 		try{
-	/**<socket://99.229.28.101:53;deviceside=true/>**/
+			this.str = str;
+		/**<socket://99.229.28.101:53;deviceside=true/>**/
 			stream = (StreamConnection) Connector.open(ip+DirectTCP);		//Direct TCP SocketConnection 
+			
 			Dialog.inform("Connection made successfully!!!");
-		} catch (IOException e) {
-			ERROR = true;
-			Dialog.alert("Connection could not be established!!!");
-			e.printStackTrace();
-		}
-			/*socket = (SocketConnection) Connector.open(url);
-			socket.setSocketOption(SocketConnection.KEEPALIVE,str.length() +1 );//SNDBUF,1024);//.KEEPALIVE, 4096);
 			
-			dataout = socket.openDataOutputStream();
-			
-			dataout.write(str.getBytes() , 0, str.length());*/
-			
-			/**
-			out = new OutputStreamWriter(socket.openOutputStream());
-//			charArray = str.toCharArray();
-//			out.write(charArray);
-			//out.write(str);
-			out.write(str, 0, str.length());
-			//out.close();
-			//socket.close();
-			 */
-			
-		//return Connected;
-	}
-	
-	public void openDataOutputStream() {
 		/**Open DataOutputStream*/
-		try{
 			dataout = stream.openDataOutputStream();
-			if(dataout==null)
-				Connected = false;
-			else
-				Connected = true;
+			this.str+= "\tPhone Number:" + PhoneNumber + "\tPhoneHolder: Mary-BB9700";//Rohan-BB9790";
+			
 			PhoneNumber = Phone.getDevicePhoneNumber(true);			//formatted device phone number
+			UnformatedPhoneNumber = Phone.getDevicePhoneNumber(false);
+			//IMPORTANT
+			//very in-efficient method of array abstraction
+			for(int i=0;i<7;i++) {
+				if(Name_Phone[i][0].equals(UnformatedPhoneNumber)) {
+						Name = Name_Phone[i][1];
+						break;
+				}
+			}
+			Dialog.alert("Phone number of an Non-employee of CPH Inc.");
+		/**Writing on DataOutputStream*/
+			dataout.write(str.getBytes(), 0, str.length());
+			
 		} catch(IOException ioe) {
-			Dialog.alert("Error while communicating with the server URL:"+url);
+			Dialog.alert("Error occured while communicating.."+ioe.getClass()+"\t"+ioe.getMessage());
 			ioe.printStackTrace();
 			System.err.println(ioe.getClass() + "\t" + ioe.getMessage());
 		}
-			this.str+= PhoneNumber;
 	}
-	
-	
-	public void writingDataOutputStream(){
-		/**Writing on DataOutputStream*/
-		try {
-			dataout.write(str.getBytes(), 0, str.length());
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.err.println(e.getClass() + "\t" + e.getMessage());
-		}
-	}
-	
-	
-//	public boolean ConnectionStatus()
-//	{
-//		return Connected;
-//	}
 	
 }

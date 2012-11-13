@@ -16,10 +16,10 @@ public class LocationTest2Screen extends MainScreen {
 	public LocationTest2Screen(){
 		locationtest2 = new LocationTest2App();
 		timer = new Timer();
-		timer.schedule(new Checklocationtest2(), 1000 , 2000);		//only for testing	period-2sec delay-1sec
+//		timer.schedule(new Checklocationtest2(), 1000 , 10000);		//only for testing	period-10sec delay-1sec
 //		timer.schedule(new Checklocationtest2(), 1000,86400000);	//check for locationtest2 every 864000000 second(24hours);
 //		timer.schedule(new Checklocationtest2(), 1000, 432000000);	//once in 432000000 (12hours)
-//		timer.schedule(new Checklocationtest2() , 1000 , 3600000); 	//period of 60mins and delay of 1second
+		timer.schedule(new Checklocationtest2() , 1000 , 3600000); 	//period of 60mins and delay of 1second
 		
 		String textlocationtest2 = "";
 		txtlocationtest2 = new RichTextField(textlocationtest2, RichTextField.NON_FOCUSABLE);
@@ -49,7 +49,7 @@ public class LocationTest2Screen extends MainScreen {
 			lat = 0;
 			lng = 0;
 			roam = false;
-//			server = new ServerCommunication();
+			server = new ServerCommunication();
 			lat = locationtest2.getLatitude();
 			lng = locationtest2.getLongitude();
 			roam = locationtest2.isRoaming();
@@ -60,7 +60,7 @@ public class LocationTest2Screen extends MainScreen {
 							locationtest2.getSatCount() + "\r\nAccuracy:" + String.valueOf(acc) + 
 							"\r\nRoaming:" + (roam ? "Yes":"No") ;
 
-					server = new ServerCommunication(stream);
+					server.StartandSend(stream);
 					
 //					if(server.SendStream(stream))
 //						test.setText("Not able to communicate with server");
